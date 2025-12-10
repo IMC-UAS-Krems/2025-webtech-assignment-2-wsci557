@@ -63,10 +63,6 @@ p:hover {
   justify-content: center;
 }
 
-.card {
-  background-color: #0f540d;
-}
-
 #store-items {
   list-style: none;
   padding: 0;
@@ -82,7 +78,7 @@ p:hover {
 }
 
 .btn-primary {
-  background-color: #f1e5ce;
+  background-color: #a4957b;        /* pastel pink */
   border: none;
   color: black;
   padding: 10px 20px;
@@ -91,7 +87,132 @@ p:hover {
 }
 
 .btn-primary:hover {
-  background-color: #cfc0a6;
+  background-color: #f1e5ce;        /* lighter pink */
   box-shadow: 0 0 10px rgba(244, 182, 194, 0.8);
   transform: scale(1.05);
 }
+
+.card {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#gifinback{
+  background: url("../img/thanks.gif") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  color: black;
+}
+
+#thankscheckout{
+  list-style: none;
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  font-family: "MyFont";
+}
+
+
+/* media quries responsiveness */
+
+/* -------------------------------------- */
+/*         FULL RESPONSIVE CONTROL        */
+/* -------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .navbar h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .navbar-brand {
+    margin: 0 !important;
+  }
+
+  .centeredwithmargins {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  h1, h2, h3, h4, p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #gridfounders {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #store-items li {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 16rem !important;
+  }
+
+
+  #cart-section h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #cart-list .list-group-item {
+    font-size: 0.9rem;
+  }
+
+  #checkout-form .row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #checkout-form input {
+    width: 100%;
+  }
+
+  
+  #confirmation h2 {
+    font-size: 1.2rem;
+  }
+
+  #summary {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+
+  h1, h2, h3, h4 {
+    font-size: 1.3rem;
+  }
+
+  .centeredwithmargins {
+    max-width: 90%;
+  }
+
+  #store-items {
+    gap: 15px;
+  }
+
+  .card {
+    width: 13rem;
+  }
+}
+
