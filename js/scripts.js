@@ -107,12 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCheckoutButton();
   }
 
-window.removeFromCart = function (index) {
-  cart.splice(index, 1);
-  updateCart();            
-};
-
-
+  window.removeFromCart = function (index) {
+    cart.splice(index, 1);
+    updateCart();
+  };
 
   document.getElementById("customer-form").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -179,7 +177,9 @@ window.removeFromCart = function (index) {
     hideAllButtons();
 
     setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       window.location.reload();
     }, 10000);
+
   });
 });
