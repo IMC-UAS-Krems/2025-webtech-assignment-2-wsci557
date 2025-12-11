@@ -331,7 +331,11 @@
           </li>
         </ul>
       </section>
-      <button id="toggle-cart-btn" class="btn btn-primary" onclick="toggleCart()">
+      <button
+        id="toggle-cart-btn"
+        class="btn btn-primary"
+        onclick="toggleCart()"
+      >
         Toggle Cart
       </button>
       <section id="cart-section" style="display: none" class="mt-4">
@@ -391,6 +395,13 @@
             />
           </div>
 
+          <div class="col-md-12">
+            <label class="form-check-label">
+              <input type="checkbox" id="gif-toggle" class="form-check-input" />
+              <b>Show animated background during confirmation</b>
+            </label>
+          </div>
+
           <button type="submit" class="btn btn-primary w-100 mt-3">
             Submit Order
           </button>
@@ -407,6 +418,16 @@
         <a class="footer-brand ms-3" href="#">
           <img src="img/logo.png" height="40" alt="moomin logo small smiling" />
         </a>
+        <p class="d-flex justify-content-center">
+          <img
+            src="img/copyright.png"
+            height="40"
+            alt="moomin themed copyright logo with a moomin in a middle"
+          /> Moomin Valley Copiright Law
+        </p>
+        <h6 class="d-flex justify-content-center">
+          🤝 Address: Moominhouse,1 Moomin Valley Road,Moomin Valley,12345 Finland
+        </h6>
       </div>
     </footer>
     <script src="js/scripts.js"></script>

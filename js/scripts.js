@@ -165,7 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
         <h4><strong>Total:</strong> M€${total.toFixed(2)}</h4>
       </div>
     `;
+    // Checkbox logic — remove gif if the user unchecks it
+    const gifCheckbox = document.getElementById("gif-toggle");
+    const gifContainer = document.getElementById("gifinback");
 
+    if (!gifCheckbox.checked) {
+      gifContainer.style.backgroundImage = "none";
+    }
     store_page.style.display = "none";
     cart_page.style.display = "none";
     checkout_page.style.display = "none";
@@ -180,6 +186,5 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
       window.location.reload();
     }, 10000);
-
   });
 });
